@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseñador 3D para JavaScript con Edición en Vivo y Control de Historial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="scene-container"></div>
+    <div id="controls">
+        <h2>Controles</h2>
+        <select id="shape-select">
+            <option value="box">Cubo</option>
+            <option value="sphere">Esfera</option>
+            <option value="cylinder">Cilindro</option>
+            <option value="cone">Cono</option>
+            <option value="torus">Toroide</option>
+            <option value="icosahedron">Icosaedro</option>
+            <option value="octahedron">Octaedro</option>
+            <option value="tetrahedron">Tetraedro</option>
+            <option value="ring">Anillo</option>
+        </select>
+        <button id="add-shape">Añadir Forma</button>
+        <div id="shape-controls"></div>
+        <button id="toggle-code">Mostrar/Ocultar Código</button>
+    </div>
+    <div id="code-editor">
+        <h3>Código JavaScript</h3>
+        <textarea id="code-output" spellcheck="false"></textarea>
+        <button id="apply-changes">Aplicar Cambios</button>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
